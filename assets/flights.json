@@ -1,0 +1,167 @@
+[
+    {
+        "title": "Київ, Бориспіль - Варшава, Модлін",
+        "date": "2023-12-13",
+        "time": "14:00",
+        "place": 5,
+        "econom": [false, 600],
+        "business": [true, 800],
+        "first": [true, 1000],
+        "id": 1,
+        "countries": ["Україна", "Польща"]
+    },
+    {
+        "title": "Варшава, Модлін - Париж, Орлі",
+        "date": "2023-12-13",
+        "time": "19:30",
+        "place": 3,
+        "econom": [true, 700],
+        "business": [true, 900],
+        "first": [true, 1100],
+        "id": 2,
+        "countries": ["Польща", "Франція"]
+    },
+    {
+        "title": "Франкфурт - Нью-Йорк, JFK",
+        "date": "2023-12-14",
+        "time": "15:00",
+        "place": 16,
+        "econom": [true, 750],
+        "business": [false, 950],
+        "first": [true, 1150],
+        "id": 3,
+        "countries": ["Німеччина", "США"]
+    },
+    {
+        "title": "Лондон, Гетвік - Токіо, Наріта",
+        "date": "2023-12-15",
+        "time": "14:00",
+        "place": 11,
+        "econom": [false, 600],
+        "business": [true, 800],
+        "first": [true, 1000],
+        "id": 4,
+        "countries": ["Велика Британія", "Японія"]
+    },
+    {
+        "title": "Торонто - Київ, Бориспіль",
+        "date": "2023-12-15",
+        "time": "14:00",
+        "place": 8,
+        "econom": [false, 600],
+        "business": [true, 800],
+        "first": [true, 1000],
+        "id": 5,
+        "countries": ["Канада", "Україна"]
+    },
+    {
+        "title": "Берлін - Лос-Анджелес, LAX",
+        "date": "2023-12-16",
+        "time": "10:30",
+        "place": 6,
+        "econom": [false, 800],
+        "business": [true, 1200],
+        "first": [false, 1500],
+        "id": 6,
+        "countries": ["Німеччина", "США"]
+    },
+    {
+        "title": "Лондон, Хітроу - Монреаль",
+        "date": "2023-12-17",
+        "time": "12:15",
+        "place": 15,
+        "econom": [true, 650],
+        "business": [true, 950],
+        "first": [true, 1300],
+        "id": 7,
+        "countries": ["Велика Британія", "Канада"]
+    },
+    {
+        "title": "Токіо, Ханеда - Париж, Шарль-де-Голль",
+        "date": "2023-12-18",
+        "time": "09:00",
+        "place": 22,
+        "econom": [true, 900],
+        "business": [true, 1100],
+        "first": [true, 1400],
+        "id": 8,
+        "countries": ["Японія", "Франція"]
+    },
+    {
+        "title": "Варшава, Чопін - Торонто",
+        "date": "2023-12-19",
+        "time": "18:45",
+        "place": 2,
+        "econom": [true, 700],
+        "business": [true, 900],
+        "first": [true, 1100],
+        "id": 9,
+        "countries": ["Польща", "Канада"]
+    },
+    {
+        "title": "Київ, Жуляни - Франкфурт",
+        "date": "2023-12-20",
+        "time": "07:30",
+        "place": 19,
+        "econom": [true, 700],
+        "business": [true, 900],
+        "first": [true, 1100],
+        "id": 10,
+        "countries": ["Україна", "Німеччина"]
+    },
+    {
+        "title": "Монреаль - Лондон, Хітроу",
+        "date": "2023-12-21",
+        "time": "14:30",
+        "place": 2,
+        "econom": [true, 700],
+        "business": [true, 900],
+        "first": [true, 1100],
+        "id": 11,
+        "countries": ["Канада", "Велика Британія"]
+    },
+    {
+        "title": "Франкфурт - Київ, Жуляни",
+        "date": "2023-12-22",
+        "time": "08:00",
+        "place": 5,
+        "econom": [false, 800],
+        "business": [true, 1200],
+        "first": [false, 1500],
+        "id": 12,
+        "countries": ["Німеччина", "Україна"]
+    },
+    {
+        "title": "Париж, Шарль-де-Голль - Токіо, Ханеда",
+        "date": "2023-12-23",
+        "time": "11:45",
+        "place": 14,
+        "econom": [true, 900],
+        "business": [true, 1100],
+        "first": [true, 1400],
+        "id": 13,
+        "countries": ["Франція", "Японія"]
+    },
+    {
+        "title": "Лос-Анджелес, LAX - Берлін",
+        "date": "2023-12-24",
+        "time": "17:00",
+        "place": 5,
+        "econom": [true, 900],
+        "business": [true, 1100],
+        "first": [true, 1400],
+        "id": 14,
+        "countries": ["США", "Німеччина"]
+    },
+    {
+        "title": "Торонто - Варшава, Чопін",
+        "date": "2023-12-25",
+        "time": "09:15",
+        "place": 2,
+        "econom": [true, 750],
+        "business": [false, 950],
+        "first": [true, 1150],
+        "id": 15,
+        "countries": ["Канада", "Польща"]
+    }
+]
