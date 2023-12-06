@@ -1,0 +1,219 @@
+<div class="places">
+    <h1 class='places-title'>Вибір місця</h1>
+    <div class="places-flight">
+        <h2>{{flightData.title}}<br/>{{flightData.time}}</h2>
+    </div>
+    <div class="places-box">
+        <div class="schema">
+            <img src="assets/images/schema/exit.png" alt="Вхід/вихід" />
+            <p>A</p><p>B</p><p>C</p><p></p><p>D</p><p>E</p><p>F</p>
+            <img src="assets/images/schema/exit.png" alt="Вхід/вихід" class='rotate-image' />
+
+            <div class='windows2'>
+                <div></div>
+                <div class='left-window'></div>
+                <div></div>
+                <div class='left-window'></div>
+            </div>
+
+            <div class='first'>
+                <div *ngFor="let place of places[0]">
+                    <img src='assets/images/schema/blocked-seat.png' alt='Зайняте місце' *ngIf="place.seat === 0" />
+                    <div [class.first-place]="!place.isSelected" *ngIf="place.seat === 1 && !place.isSelected" (click)="handlePlaceChange(0, place.id, flightData.first[1])"></div>
+                    <img src="assets/images/schema/selected-seat.png" alt="" (click)="handlePlaceChange(0, place.id, flightData.first[1])" *ngIf="place.seat === 1 && place.isSelected">
+                </div>
+            </div>
+
+            <div class='gap'></div>
+            <div class='gap'>
+                <p>1</p>
+                <p>2</p>
+                <p>3</p>
+                <p>4</p>
+            </div>
+            <div class='gap'></div>
+
+            <div class='first'>
+                <div *ngFor="let place of places[1]">
+                    <img src='assets/images/schema/blocked-seat.png' alt='Зайняте місце' *ngIf="place.seat === 0" />
+                    <div [class.first-place]="!place.isSelected" *ngIf="place.seat === 1 && !place.isSelected" (click)="handlePlaceChange(1, place.id, flightData.first[1])"></div>
+                    <img src="assets/images/schema/selected-seat.png" alt="" (click)="handlePlaceChange(1, place.id, flightData.first[1])" *ngIf="place.seat === 1 && place.isSelected">
+                </div>
+            </div>
+
+            <div class='windows2'>
+                <div></div>
+                <div class='right-window'></div>
+                <div></div>
+                <div class='right-window'></div>
+            </div>
+
+            <img src="assets/images/schema/exit.png" alt="Вхід/вихід" />
+            <hr />
+            <img src="assets/images/schema/exit.png" alt="Вхід/вихід" class='rotate-image' />
+            
+            <div class='windows5'>
+                <div></div>
+                <div class='left-window'></div>
+                <div></div>
+                <div class='left-window'></div>
+                <div></div>
+                <div class='left-window'></div>
+                <div></div>
+                <div class='left-window'></div>
+                <div></div>
+                <div class='left-window'></div>
+            </div>
+
+            <div class='business'>
+                <div *ngFor="let place of places[2]">
+                    <img src='assets/images/schema/blocked-seat.png' alt='Зайняте місце' *ngIf="place.seat === 0" />
+                    <div [class.business-place]="!place.isSelected" *ngIf="place.seat === 1 && !place.isSelected" (click)="handlePlaceChange(2, place.id, flightData.business[1])"></div>
+                    <img src="assets/images/schema/selected-seat.png" alt="" (click)="handlePlaceChange(2, place.id, flightData.business[1])" *ngIf="place.seat === 1 && place.isSelected">
+                </div>
+            </div>
+
+            <div class='gap2'>
+                <p>5</p>
+                <p>6</p>
+                <p>7</p>
+                <p>8</p>
+                <p>9</p>
+                <p>10</p>
+                <p>11</p>
+                <p>12</p>
+                <p>13</p>
+                <p>14</p>
+            </div>
+
+            <div class='business'>
+                <div *ngFor="let place of places[3]">
+                    <img src='assets/images/schema/blocked-seat.png' alt='Зайняте місце' *ngIf="place.seat === 0" />
+                    <div [class.business-place]="!place.isSelected" *ngIf="place.seat === 1 && !place.isSelected" (click)="handlePlaceChange(3, place.id, flightData.business[1])"></div>
+                    <img src="assets/images/schema/selected-seat.png" alt="" (click)="handlePlaceChange(3, place.id, flightData.business[1])" *ngIf="place.seat === 1 && place.isSelected">
+                </div>
+            </div>
+
+            <div class='windows5'>
+                <div></div>
+                <div class='right-window'></div>
+                <div></div>
+                <div class='right-window'></div>
+                <div></div>
+                <div class='right-window'></div>
+                <div></div>
+                <div class='right-window'></div>
+                <div></div>
+                <div class='right-window'></div>
+            </div>
+
+            <div class='econom'>
+                <div *ngFor="let place of places[4]">
+                    <img src='assets/images/schema/blocked-seat.png' alt='Зайняте місце' *ngIf="place.seat === 0" />
+                    <div [class.econom-place]="!place.isSelected" *ngIf="place.seat === 1 && !place.isSelected" (click)="handlePlaceChange(4, place.id, flightData.econom[1])"></div>
+                    <img src="assets/images/schema/selected-seat.png" alt="" (click)="handlePlaceChange(4, place.id, flightData.econom[1])" *ngIf="place.seat === 1 && place.isSelected">
+                </div>
+            </div>
+
+            <div class='econom'>
+                <div *ngFor="let place of places[5]">
+                    <img src='assets/images/schema/blocked-seat.png' alt='Зайняте місце' *ngIf="place.seat === 0" />
+                    <div [class.econom-place]="!place.isSelected" *ngIf="place.seat === 1 && !place.isSelected" (click)="handlePlaceChange(5, place.id, flightData.econom[1])"></div>
+                    <img src="assets/images/schema/selected-seat.png" alt="" (click)="handlePlaceChange(5, place.id, flightData.econom[1])" *ngIf="place.seat === 1 && place.isSelected">
+                </div>
+            </div>
+
+            <img src="assets/images/schema/exit.png" alt="Вхід/вихід" />
+            <p>A</p><p>B</p><p>C</p><p><strong>WC</strong></p><p>D</p><p>E</p><p>F</p>
+            <img src="assets/images/schema/exit.png" alt="Вхід/вихід" class='rotate-image' />
+        </div>
+
+        <!-- Інформація про місця -->
+
+        <div class="place-info">
+            <h2>Інформація про місця</h2>
+            <div class="seats-info-box">
+                <div class="seat-info">
+                    <div class='first-place'></div>
+                    <h3>Перший клас</h3>
+                    <h3>Ціна</h3>
+                    <ul>
+                        <li>розкішний комфорт</li>
+                        <li>вишукане обслуговування</li>
+                        <li>приватний простір</li>
+                        <li>ексклюзивні послуги</li>
+                    </ul>
+                    
+                    <p class='price'><strong>{{flightData.first[1]}} грн</strong><br />на 1 людину</p>
+                </div>
+
+                <hr />
+
+                <div class="seat-info">
+                    <div class='business-place'></div>
+                    <h3>Бізнес клас</h3>
+                    <h3>Ціна</h3>
+                    <ul>
+                        <li>розширений комфорт</li>
+                        <li>високий рівень послуг</li>
+                        <li>приватний простір</li>
+                    </ul>
+                    
+                    <p class='price'><strong>{{flightData.business[1]}} грн</strong><br />на 1 людину</p>
+                </div>
+
+                <hr />
+
+                <div class="seat-info">
+                    <div class='econom-place'></div>
+                    <h3>Економ клас</h3>
+                    <h3>Ціна</h3>
+                    <ul>
+                        <li>базовий комфорт</li>
+                        <li>зменшений вибір їжі</li>
+                        <li>стандартні сидіння</li>
+                    </ul>
+                    
+                    <p class='price'><strong>{{flightData.econom[1]}} грн</strong><br />на 1 людину</p>
+                </div>
+
+                <hr />
+
+                <div class="blocked-seat-info">
+                    <img src="assets/images/schema/blocked-seat.png" alt="" />
+                    <h3>Зарезервоване місце</h3>
+                    <h4>Місце може бути вже зайняте або недоступне для покупки</h4>
+                </div>
+
+                <hr />
+
+                <div class="selected-seat-info">
+                    <img src="assets/images/schema/selected-seat.png" alt="" />
+                    <h3>Вибране місце</h3>
+                </div>
+            </div>
+
+            <div class="baggage-info">
+                <h2>Інформація про багаж</h2>
+                <img src="assets/images/schema/7kg.png" alt="7 кг багажу" (click)="changeBaggage(0)" [class.selected-baggage]='baggageValue === 0' />
+                <img src="assets/images/schema/20kg.png" alt="20 кг багажу" (click)="changeBaggage(100)" [class.selected-baggage]='baggageValue === 100' />
+                <img src="assets/images/schema/32kg.png" alt="32 кг багажу" (click)="changeBaggage(200)" [class.selected-baggage]='baggageValue === 200' />
+
+                <p>до 7 кг</p>
+                <p>до 20 кг</p>
+                <p>до 32 кг</p>
+
+                <p class='baggage-price'>{{baggageValue}} грн (UAH)</p>
+            </div>
+        </div>
+
+        <div class="cart-box">
+            <img src="assets/images/schema/cart.png" alt="Кошик" />
+            <p>Кошик: <br />{{cartPrice}} грн</p>
+            <p>Ціна: {{price + baggageValue}} грн (UAH)</p>
+            <button (click)="updateCart()" [class.unavailable]="!selected" *ngIf="!bought" [disabled]="!selected">Додати в<br />кошик</button>
+            <button [routerLink]="['/compare']" *ngIf="bought">Продовжити<br />бронювання</button>
+            <button [routerLink]="['/pay']">Перейти до<br />оплати</button>
+        </div>
+    </div>
+</div>

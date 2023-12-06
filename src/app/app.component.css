@@ -1,0 +1,22 @@
+main {
+    grid-column: 2 / 2;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+
+    padding: 35px 0 0 30px;
+}
+
+main.ng-enter {
+    transition:0.5s linear all;
+    opacity:0;
+}
+  
+main.ng-enter.ng-enter-active {
+    opacity:1;
+}
+
+app-footer {
+    grid-column: span 2;
+}

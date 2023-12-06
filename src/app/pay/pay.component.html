@@ -1,0 +1,70 @@
+<div class="pay">
+    <h1>Оплата квитків</h1>
+  
+    <div *ngIf="flights.length !== 0" class='pay-case1'>
+      <div class='tickets-list' *ngFor="let flight of flights">
+          <h2>Рейс:</h2>
+          <h2> {{flight.title}}</h2>
+          
+          <h2>Час:</h2>
+          <h2>{{flight.time}}</h2>
+          
+          <h2>Місце:</h2>
+          <h2>{{flight.place}}</h2>
+          
+          <h2>Ціна:</h2>
+          <h2>{{flight.price}} грн</h2>
+
+          <button (click)="handleDelete(flight.id)">
+              <img src="/assets/images/pay/trash.png" alt="Видалити квиток" />
+          </button>
+      </div>
+
+          <form name="payForm" #payForm="ngForm" class='pay-data'>
+            <h2>Дані оплати:</h2>
+            <div class='pay-info'>
+                <div class="form">
+                    <input type="text" name="lastname" placeholder="Прізвище" minlength='3' maxlength='15' required [(ngModel)]="lastname" pattern="[A-Za-zІ-іЇ-їЄ-єҐ-ґ']+" class="form-inputs" #lastnameInput="ngModel" />        
+                    <div *ngIf="lastnameInput.touched && lastnameInput.invalid" style="display: flex; justify-content: center;">
+                        <small>Введіть коректне прізвище</small>
+                    </div>
+                </div>
+    
+                <div class="form">
+                    <input type="text" name="firstname" placeholder="Ім'я" minlength='3' maxlength='15' required [(ngModel)]="firstname" pattern="[A-Za-zІ-іЇ-їЄ-єҐ-ґ']+" class="form-inputs" #firstnameInput="ngModel" />
+                    <div *ngIf="firstnameInput.touched && lastnameInput.invalid" style="display: flex; justify-content: center;">
+                        <small>Введіть коректне ім'я</small>
+                    </div>
+                </div>
+                
+                <div class="form">
+                    <input type="tel" name="mobile" placeholder='Телефон' maxlength='10' required [(ngModel)]="mobile" pattern="^0\d{9}$" class="form-inputs" #mobileInput="ngModel" />
+                    <div *ngIf="mobileInput.touched && mobileInput.invalid" style="display: flex; justify-content: center;">
+                        <small>Введіть коректний телефон</small>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Метод оплати:</h2>
+            <div class='pay-method'>
+                <label for="mastercard-visa">
+                    <input type="radio" id="mastercard-visa" name="payment-method" [(ngModel)]="selectedPaymentMethod" value="mastercard-visa" required />
+                    <img src="/assets/images/pay/mastercard-visa.png" alt="MasterCard Visa" />
+                </label>
+        
+                <label for="g-apple-pay">
+                    <input type="radio" id="g-apple-pay" name="payment-method" [(ngModel)]="selectedPaymentMethod" value="g-apple-pay"/>
+                    <img src="/assets/images/pay/g-apple-pay.png" alt="G-Pay Apple-Pay" />
+                </label>
+            </div>
+            <input type="submit" value="Оплатити" class='pay-button' [disabled]="!payForm.valid || selectedPaymentMethod === ''">            
+          </form>
+
+
+      </div>
+  
+    <div *ngIf="flights.length === 0" class='pay-case2'>
+      <h2>Ваший список квитків порожній</h2>
+      <a [routerLink]="['/']" class='pay-button'><p>Назад на головну</p></a>
+    </div>
+  </div>

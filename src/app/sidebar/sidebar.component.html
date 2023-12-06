@@ -1,0 +1,38 @@
+<nav class="sidebar">
+    <div class="logo-container">
+        <img src="assets/images/sidebar/Logo.png" alt="Логотип компанії" />
+        <a [routerLink]="['login']">
+            <p class="login">Вхід</p>
+        </a>
+    </div>
+
+    <hr />
+
+    <div class="logo-container item">
+        <img src="assets/images/sidebar/Home.png" alt="Логотип домашньої сторінки" class="icon" />
+        <a [routerLink]="['']">
+            <p>Головна</p>
+        </a>
+    </div>
+
+    <div class="logo-container item">
+        <img src="assets/images/sidebar/Sales.png" alt="Логотип знижок" class="icon" />
+        <a [routerLink]="['Deshevi-kvytky-na-litak']">
+            <p>Акції та<br />знижки</p>
+        </a>
+    </div>
+
+    <div class="logo-container item">
+        <img src="assets/images/sidebar/Questions.png" alt="Логотип питань" class="icon" />
+        <a [routerLink]="['Servis-porivniannia-aviareisiv']">
+            <p>Про нас</p>
+        </a>
+    </div>
+
+    <div class="logo-container item">
+        <img src="assets/images/sidebar/Support.png" alt="Логотип підтримки" class="icon" />
+        <a (click)="scrollToFooter()">
+            <p>Зворотній<br />зв'язок</p>
+        </a>
+    </div>
+</nav>

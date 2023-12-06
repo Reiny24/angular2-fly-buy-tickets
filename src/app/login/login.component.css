@@ -1,0 +1,102 @@
+.login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0.9);
+}
+
+.login-page {
+    margin: 0px 0px 20px 0;
+    padding: 20px;
+    background-color: rgba(213, 187, 166, 0.80);
+    border-radius: 35px;
+    width: 700px;
+    display: grid;
+    justify-items: center;
+}
+
+.login-form {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 8fr 150px;
+    align-items: center;
+    padding-left: 150px;
+}
+
+.login-button {
+    width: 320px;
+    height: 75px;
+    background-color: #FF9400;
+    border: solid white 5px;
+    border-radius: 24px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    justify-self: center;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: white;
+    border-color: #FF9400;
+    color: #FF9400;
+    cursor: pointer;
+}
+
+.login-page img {
+    width: 80px;
+}
+
+.login-page button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: purple;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.login-page p {
+    font-size: 24px;
+}
+
+.form-inputs {
+    margin: 5px;
+    height: 40px;
+    width: 300px;
+    font-size: 35px;
+    padding: 20px;
+    text-align: center;
+    border: 3px solid gray;
+    border-radius: 10px;
+    grid-column: 1 / 2;
+    justify-self: end;
+}
+
+.form-inputs.ng-invalid.ng-touched {
+    border: 3px solid red;
+}
+
+.registration {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 8fr 150px;
+    width: 355px;
+    align-items: center;
+}
+
+small {
+    font-size: 16px;
+    color: red;
+    display: block;
+    text-align: center;
+}
+
+.login-button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed !important;
+}

@@ -1,0 +1,227 @@
+.pay {
+    padding-left: 30px;
+}
+
+.pay h1 {
+    grid-column: span 2;
+    color: black;
+    justify-self: start;
+    margin: 10px 0 0 0;
+}
+
+.pay h2 {
+    margin: 0;
+    color: black;
+}
+
+.pay-data {
+    position: fixed;
+    display: grid;
+    justify-items: center;
+    column-gap: 20px;
+    right: 2%;
+    color: white;
+    align-items: center;
+    padding-bottom: 20px;
+    top: 6.5%
+}
+
+.pay-data img {
+    max-width: 150px;
+    justify-self: end;
+}
+
+.pay-data p {
+    margin: 0;
+    padding: 5px;
+    font-size: 20px;
+}
+
+.tickets-list {
+    background: #EBC99A;
+    grid-column: 1 / 1;
+    margin: 10px 0px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 20px 10px;
+    width: 670px;
+}
+
+.tickets-list button {
+    background: none;
+    border: none;
+    position: absolute;
+    align-self: end;
+    justify-self: end;
+}
+
+.tickets-list img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.pay-info {
+    display: grid;
+    align-items: center;
+    background: rgba(87, 73, 53, 0.7);
+    border: solid 8px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 0 20px;
+    margin: 3px 0;
+    height: 260px;
+    width: 260px;
+}
+
+.pay-info p {
+    grid-column: span 2;
+}
+
+.pay-info input[type="radio"] {
+    height: 20px;
+    width: 20px;
+    justify-self: end;
+}
+
+.pay-method {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    background: rgba(87, 73, 53, 0.7);
+    border: solid 8px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 0 10px;
+    margin: 3px 0;
+    height: 120px;
+    width: 280px;
+}
+
+.pay-method label {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+}
+
+.pay-button {
+    max-width: 200px;
+    height: 70px;
+    width: 200px;
+    background-color: #FF9400;
+    border: solid white 5px;
+    border-radius: 24px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+    font-size: 24px;
+    font-weight: bold;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.pay-button:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.pay-button p {
+    margin: 0;
+    padding: 10px;
+}
+
+.pay-button:hover {
+    background-color: white;
+    border-color: #FF9400;
+    color: #FF9400;
+    cursor: pointer;
+}
+
+.confirmation {
+    display: grid;
+    grid-template-columns: 20px 1fr;
+    color: black;
+}
+
+.pay-case1 {
+    display: grid;
+    justify-items: start;
+    align-items: center;
+}
+
+.pay-case2 {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 20px 0;
+    background: rgba(133, 133, 133, 0.7);
+    padding: 20px;
+    border: solid 10px white;
+    border-radius: 35px;
+    margin: 10px 20px;
+}
+
+.pay-case2 h2 {
+    align-self: center;
+    color: white;
+}
+
+.form-inputs {
+    margin: 5px;
+    height: 30px;
+    width: 200px;
+    font-size: 17px;
+    padding: 10px 20px;
+    text-align: center;
+    border: 3px solid gray;
+    border-radius: 10px;
+    justify-self: center;
+}
+
+small {
+    color: red;
+    text-align: center;
+}
+
+.form-inputs.ng-invalid.ng-touched {
+    border: 3px solid red;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: 1fr 20px;
+    justify-content: center;
+}
+
+@media (max-width: 1260px) {
+    .pay {
+        grid-template-columns: auto;
+    }
+    .pay h1 {
+        grid-column: auto;
+    }
+
+    .pay-data {
+        position: relative;
+        z-index: 1;
+        right: 0%;
+        top: 0%;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .pay-data h2 {
+        grid-row: 1 / 2;
+    }
+
+    .pay-method {
+        height: 260px;
+    }
+
+    .pay-button {
+        grid-column: span 2;
+    }
+}
+
+@media (min-width: 1300px) {
+    .pay-data {
+        right: 10%;
+    }
+}

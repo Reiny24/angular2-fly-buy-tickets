@@ -1,0 +1,45 @@
+<div class="login">
+    <div class='login-page'>
+        <h1>FlyBuyTickets - {{ isLogin ? 'Вхід' : 'Реєстрація' }}</h1>
+        <h2>{{ isLogin ? 'З поверненням!' : 'Створіть обліковий запис' }}</h2>
+    
+        <form name="loginForm" class="login-form" #loginForm="ngForm">
+            <div class="registration" *ngIf="!isLogin">
+                <input type="text" name="lastname" placeholder='Прізвище' minlength='3' maxlength='15' required [(ngModel)]="lastname" pattern="[A-Za-zІ-іЇ-їЄ-єҐ-ґ']+" class="form-inputs" #lastnameInput="ngModel" />
+                <div *ngIf="lastnameInput.touched && lastnameInput.invalid">
+                    <small>Введіть коректне прізвище</small>
+                </div>
+                
+                <input type="text" name="firstname" placeholder="Ім'я" minlength='3' maxlength='15' required [(ngModel)]="firstname" pattern="[A-Za-zІ-іЇ-їЄ-єҐ-ґ']+" class="form-inputs" #firstnameInput="ngModel" />
+                <div *ngIf="firstnameInput.touched && lastnameInput.invalid">
+                    <small>Введіть коректне ім'я</small>
+                </div>
+    
+                <input type="tel" name="mobile" placeholder='Телефон' maxlength='10' required [(ngModel)]="mobile" pattern="^0\d{9}$" class="form-inputs" #mobileInput="ngModel" />
+                <div *ngIf="mobileInput.touched && mobileInput.invalid">
+                    <small>Введіть коректний телефон</small>
+                </div>
+            </div>
+            
+            <input type="text" name="login" placeholder='Логін' minlength='4' maxlength='15' required [(ngModel)]="login" pattern="^[a-zA-Z0-9]+$" class="form-inputs" #loginInput="ngModel" />
+            <div *ngIf="loginInput.touched && loginInput.invalid">
+                <small>Введіть коректний логін</small>
+            </div>
+            
+            <input type="{{ showPassword ? 'text' : 'password' }}" name="password" placeholder='Пароль' minlength='6' maxlength='15' required [(ngModel)]="password" class="form-inputs" #passwordInput="ngModel" />
+            <button (click)="togglePasswordVisibility()">
+                <img *ngIf="showPassword" src="assets/images/login/show.png" alt="" />
+                <img *ngIf="!showPassword" src="assets/images/login/hide.png" alt="" />
+            </button>
+
+            <a href='' *ngIf="isLogin"><strong>Забули пароль?</strong></a>
+        </form>
+    
+        <input type="submit" value="{{ isLogin ? 'Увійти' : 'Зареєструватися' }}" class="login-button" [disabled]="!loginForm.valid" />
+
+        <p>
+            <strong>{{ isLogin ? "Не маєте облікового запису? " : "Вже маєте обліковий запис? " }}</strong>
+            <button (click)="toggleForm()">{{ isLogin ? 'Зареєструйтесь!' : 'Увійти!' }}</button>
+        </p>
+    </div>
+</div>

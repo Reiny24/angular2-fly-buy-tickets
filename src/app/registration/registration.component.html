@@ -1,0 +1,22 @@
+<div class="login">
+    <div class='login-page'>
+        <h1>FlyBuyTickets - Вхід</h1>
+        <h2>З поверненням!</h2>
+
+        <form name="loginForm" class="login-form" (ngSubmit)="login()" #loginForm="ngForm">
+            <input type="text" name="login" placeholder='Логін' maxlength='15' required [(ngModel)]="log.login" class="form-inputs" #loginInput="ngModel" />
+            <div *ngIf="(loginForm.submitted || loginInput.touched) && loginInput.invalid">
+                <small style="color: red; display: block; text-align: center;">Введіть коректний логін</small>
+            </div>
+
+            <input type="password" name="password" placeholder='Пароль' maxlength='15' required [(ngModel)]="log.password" class="form-inputs" #passwordInput="ngModel" />
+            <img src="assets/images/login/hide.png" alt="" />
+
+            <input type="submit" value="Увійти" class="login-button" [class.disabled-input]="loginForm.invalid" />
+        </form>
+
+        <p><strong>Не маєте облікового запису? </strong>
+            <a [routerLink]="['/registration']">Зареєструйтесь!</a>
+        </p>
+    </div>
+</div>

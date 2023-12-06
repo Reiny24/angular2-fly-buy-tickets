@@ -1,0 +1,74 @@
+<div class="compare">
+    <h1 class='compare-title'>Порівняння авіарейсів</h1>
+
+    <div>
+        <div class="twoWays" *ngIf="!oneWay">
+            <button class="active" [class.disactive]="!from" (click)="switchWay(true)">Переліт</button>
+            <button class="active left" [class.disactive]="from" (click)="switchWay(false)">Повернення</button>
+        </div>
+
+        <div *ngIf="from">
+            <div *ngFor="let flight of filteredFlights" class='compare-flight'>
+                <div class="flight-info">
+                    <p class="title">Рейс:</p>
+                    <p class="title">{{flight.title}}</p>
+                    
+                    <p class="sub-title">Час:</p>
+                    <p class="sub-title">{{flight.date + ' ' + flight.time}}</p>
+                    
+                    <p class="sub-title">Місця:</p>
+                    <p class="sub-title">{{flight.place}} вільних</p>
+                    
+                    <p class="sub-title">Клас:</p>
+    
+                    <div class="prices">
+                        <p [class.selected]="filters.salon === 'Економ'" [class.unavailable]="!flight.econom[0]">Економ</p>
+                        <p [class.selected]="filters.salon === 'Бізнес'" [class.unavailable]="!flight.business[0]">Бізнес</p>
+                        <p [class.selected]="filters.salon === 'Перший'" [class.unavailable]="!flight.first[0]">Перший</p>
+                        
+                        <p [class.selected]="filters.salon === 'Економ'" [class.unavailable]="!flight.econom[0]">{{flight.econom[1]}} грн</p>
+                        <p [class.selected]="filters.salon === 'Бізнес'" [class.unavailable]="!flight.business[0]">{{flight.business[1]}} грн</p>
+                        <p [class.selected]="filters.salon === 'Перший'" [class.unavailable]="!flight.first[0]">{{flight.first[1]}} грн</p>
+                    </div>
+    
+                    <p class="sub-title">Ціна:</p>
+                </div>
+                <a (click)="sendData(flight.id)" [routerLink]="['/places']" class="buy-ticket">
+                    <p class="sub-title">Купити</p>
+                </a>
+            </div>
+        </div>
+
+        <div *ngIf="!from">
+            <div *ngFor="let flight of filteredFlightsBack" class='compare-flight'>
+                <div class="flight-info">
+                    <p class="title">Рейс:</p>
+                    <p class="title">{{flight.title}}</p>
+                    
+                    <p class="sub-title">Час:</p>
+                    <p class="sub-title">{{flight.date + ' ' + flight.time}}</p>
+                    
+                    <p class="sub-title">Місця:</p>
+                    <p class="sub-title">{{flight.place}} вільних</p>
+                    
+                    <p class="sub-title">Клас:</p>
+    
+                    <div class="prices">
+                        <p [class.selected]="filters.salon === 'Економ'" [class.unavailable]="!flight.econom[0]">Економ</p>
+                        <p [class.selected]="filters.salon === 'Бізнес'" [class.unavailable]="!flight.business[0]">Бізнес</p>
+                        <p [class.selected]="filters.salon === 'Перший'" [class.unavailable]="!flight.first[0]">Перший</p>
+                        
+                        <p [class.selected]="filters.salon === 'Економ'" [class.unavailable]="!flight.econom[0]">{{flight.econom[1]}} грн</p>
+                        <p [class.selected]="filters.salon === 'Бізнес'" [class.unavailable]="!flight.business[0]">{{flight.business[1]}} грн</p>
+                        <p [class.selected]="filters.salon === 'Перший'" [class.unavailable]="!flight.first[0]">{{flight.first[1]}} грн</p>
+                    </div>
+    
+                    <p class="sub-title">Ціна:</p>
+                </div>
+                <a (click)="sendData(flight.id)" [routerLink]="['/places']" class="buy-ticket">
+                    <p class="sub-title">Купити</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

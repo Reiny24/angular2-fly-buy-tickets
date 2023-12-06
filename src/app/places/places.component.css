@@ -1,0 +1,350 @@
+.places {
+    display: grid;
+    justify-items: center;
+    font-size: 30px;
+}
+
+.places-title {
+    background: rgba(255, 148, 0, 0.70);
+    margin: 0;
+    width: 800px;
+    text-align: center;
+    padding: 20px;
+    font-size: 45px;
+}
+
+.places h2 {
+    font-size: 37px;
+    margin: 0;
+}
+
+.places h3 {
+    padding: 0 10px;
+    margin: 0;
+    font-size: 30px;
+}
+
+.places h4 {
+    padding: 0 10px;
+    font-size: 25px;
+    margin: 0;
+    color: rgb(77, 76, 76);
+}
+
+.places-flight {
+    justify-self: stretch;
+    background-color: rgba(255, 255, 255, 0.40);
+}
+
+.places-flight h2 {
+    background: rgba(255, 148, 0, 0.60);
+    text-align: center;
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.places-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: start;
+    margin: 30px 20px;
+    padding-top: 20px;
+    background-color: rgba(114, 111, 106, 0.70);
+    height: 1320px
+}
+
+.places-box h2 {
+    text-align: center;
+    padding: 10px;
+}
+
+.schema {
+    background-color: rgba(217, 200, 177, 0.7);
+    margin: 0 20px 20px 20px;
+    padding: 10px 0;
+    justify-self: center;
+    align-items: center;
+    justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(9, 60px);
+    grid-template-rows: repeat(17, 60px);
+    gap: 10px;
+    transform: scale(0.9);
+}
+
+.rotate-image {
+    transform: rotate(180deg);
+}
+
+.schema hr {
+    grid-column: span 7;
+    border: none;
+    border-top: 5px solid black; 
+    width: 100%;
+}
+
+.windows2, .windows5 {
+    display: grid;
+    gap: 10px;
+}
+
+.windows2 {
+    grid-row: span 4;
+    grid-template-rows: repeat(4, 60px);
+}
+
+.windows5 {
+    grid-row: span 10;
+    grid-template-rows: repeat(10, 60px);
+}
+
+.left-window, .right-window {
+    height: 40px;
+    width: 30px;
+    align-self: center;
+}
+
+.left-window {
+    border-right: solid 5px rgb(104, 104, 105);
+}
+
+.right-window {
+    border-left: solid 5px rgb(104, 104, 105);
+}
+
+.first {
+    grid-column: span 2;
+    grid-row: span 4;
+    display: grid;
+    grid-template-columns: repeat(2, 60px);
+    grid-template-rows: repeat(4, 60px);
+    gap: 10px;
+}
+
+.business {
+    grid-row: span 4;
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(4, 60px);
+    gap: 10px
+}
+
+.econom {
+    grid-row: span 6;
+    grid-column: span 3;
+    display: grid;
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(6, 60px);
+    gap: 10px;
+}
+
+.first-place, .business-place, .econom-place {
+    width: 55px;
+    height: 55px;
+    border: solid 4px black;
+    border-radius: 20px 20px 0 0;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.first-place {
+    background-color: rgb(53, 123, 252);
+}
+
+.business-place {
+    background-color: #cd7c0a;
+}
+
+.econom-place {
+    background-color: #e1cd1c;
+}
+
+.schema .business-place:hover, .schema .econom-place:hover, .schema .first-place:hover {
+    border: solid 3px white;
+    background-color: #79D900;
+}
+
+.business img, .first img, .econom img {
+    width: 100%;
+}
+
+.selected-place {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('/src/assets/images/schema/selected-seat.png');
+}
+
+.gap, .gap2 {
+    display: grid;
+    gap: 10px;
+    align-items: center;
+}
+
+.gap {
+    grid-row: span 4;
+    grid-template-rows: repeat(4, 60px);
+}
+
+.gap2 {
+    grid-row: span 10;
+    grid-template-rows: repeat(10, 60px);
+    text-align: center;
+}
+
+.gap2 p {
+    padding: 0;
+}
+
+.seats-info-box {
+    background: rgba(217, 200, 177, 0.7);
+    border: solid 8px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 20px;
+}
+
+.seats-info-box img {
+    width: 60px;
+    align-self: center;
+    grid-row: span 3;
+}
+
+ul {
+    margin: 0;
+    font-size: 24px;
+}
+
+.seats-info-box p {
+    margin: 0;
+}
+
+.seat-info {
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    gap: 10px;
+    align-items: center;
+}
+
+.seat-info .business-place, .seat-info .first-place, .seat-info .econom-place {
+    grid-row: span 2;
+}
+
+.price {
+    font-size: 27px;
+    margin: 0
+}
+
+.blocked-seat-info, .selected-seat-info {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    gap: 10px;
+}
+
+.blocked-seat-info img, .selected-seat-info img {
+    grid-row: span 2;
+}
+
+.baggage-info {
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+
+    background: rgba(217, 200, 177, 0.7);
+    border: solid 8px rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 10px;
+    
+    margin: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 110px;
+}
+
+.baggage-info h2 {
+    grid-column: span 3;
+}
+
+.baggage-info p {
+    text-align: center;
+    margin: 0;
+}
+
+.baggage-price {
+    grid-column: span 3;
+    justify-self: end;
+    padding-right: 30px;
+    font-weight: bold;
+}
+
+.baggage-info img {
+    border-radius: 15px;
+}
+
+.selected-baggage {
+    border: solid 5px #79D900;
+}
+
+.cart-box {
+    grid-column: span 2;
+    display: grid;
+    grid-template-columns: 80px 150px 2fr 1fr 1fr;
+    align-items: center;
+    background: rgb(51, 54, 63);
+    padding: 20px;
+    
+    color: white;
+    position: relative;
+    top: -60px
+}
+
+.cart-box p {
+    justify-self: center;
+    padding-right: 20px;
+}
+
+.cart-box button {
+    width: 200px;
+    height: 75px;
+    background-color: #FF9400;
+    border: solid white 5px;
+    border-radius: 24px;
+    margin: 10px;
+    color: white;
+    text-decoration: none;
+    justify-self: end;
+    text-align: center;
+    transition: background-color 0.5s, border-color 0.5s, color 0.5s;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cart-box button:hover {
+    background-color: white;
+    border-color: #FF9400;
+    color: #FF9400;
+    cursor: pointer;
+}
+
+.unavailable {
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+@media (max-width: 1400px) {
+    .places-box {
+        grid-template-columns: 1fr;
+        height: auto;
+    }
+
+    .cart-box {
+        grid-column: 1 / 1;
+        top: 0
+    }
+
+    .schema {
+        transform: scale(1);
+    }
+}

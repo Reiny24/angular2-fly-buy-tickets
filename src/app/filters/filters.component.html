@@ -1,0 +1,117 @@
+<div class="item filters">
+    <h1>Міжнародні авіаквитки</h1>
+
+    <div class="filters-direction">
+        <label htmlFor="option1">
+            <img src="assets/images/filters/Arrow.png" alt="One direction" />
+            <p>В один бік</p>
+            <input type="radio" id="option1" name="options" [value]="true" [(ngModel)]="oneWay" />
+        </label>
+    </div>
+    
+    <div class="filters-direction">
+        <label htmlFor="option2">
+            <img src="assets/images/filters/Arrows.png" alt="Two directions" />
+            <p>У два боки</p>
+            <input type="radio" id="option2" name="options" [value]="false" [(ngModel)]="oneWay" />
+        </label>
+    </div>
+
+    <div class="filters-box filters-box1">
+        <p>Із</p>
+        <select class="filters-input" [(ngModel)]="from">
+            <option value="" disabled selected hidden>Виберіть країну</option>
+            <option value="Велика Британія">Велика Британія</option>
+            <option value="Канада">Канада</option>
+            <option value="Німеччина">Німеччина</option>
+            <option value="Польща">Польща</option>
+            <option value="США">США</option>
+            <option value="Україна">Україна</option>
+            <option value="Франція">Франція</option>
+            <option value="Японія">Японія</option>
+        </select>
+    </div>
+
+    <div class="filters-box">
+        <p>Куди</p>
+        <select class="filters-input" [(ngModel)]="to">
+            <option value="" disabled selected hidden>Виберіть країну</option>
+            <option value="Велика Британія">Велика Британія</option>
+            <option value="Канада">Канада</option>
+            <option value="Німеччина">Німеччина</option>
+            <option value="Польща">Польща</option>
+            <option value="США">США</option>
+            <option value="Україна">Україна</option>
+            <option value="Франція">Франція</option>
+            <option value="Японія">Японія</option>
+        </select>
+    </div>
+
+    <div class="filters-box">
+        <p>Відправлення</p>
+        <input type="date" class="filters-input" [(ngModel)]="shipping"/>
+    </div>
+
+    <div class="filters-box" [class.unavailable]="oneWay">
+        <p>Повернення</p>
+        <input type="date" class="filters-input" [(ngModel)]="returning" [disabled]="oneWay"/>
+    </div>
+
+    <div class="filters-box">
+        <p>Мандрівники</p>
+        <div class='travelers'>
+            Дорослі:
+            <button (click)="decreaseAdults()">-</button>
+            {{ adults }}
+            <button (click)="increaseAdults()">+</button>
+            
+            Діти:
+            <button (click)="decreaseChildren()">-</button>
+            {{ children }}
+            <button (click)="increaseChildren()">+</button>
+        </div>
+    </div>
+
+    <div class="filters-box filters-box6">
+        <p>Клас салону</p>
+        <select class="filters-input" [(ngModel)]="salon">
+            <option value="" disabled selected hidden>Виберіть клас</option>
+            <option value="Перший">Перший</option>
+            <option value="Бізнес">Бізнес</option>
+            <option value="Економ">Економ</option>
+        </select>
+    </div>
+
+    <a (click)="sendData()" [routerLink]="['/compare']" class="compare-button"><h2>Порівняти<br />рейси</h2></a>
+</div>
+
+<!-- Info -->
+
+<div class="info">
+    <div class="info-box">
+        <img src="assets/images/info/globe.png" alt="Глобус, подорожуйте з нами" />
+        <h2 class="info-title">Розкрийте світ з нами</h2>
+        <p class="info-text">
+            Дізнайтеся про найкращі пропозиції авіарейсів до будь-яких куточків світу
+            і вирушайте у <strong>міжнародні подорожі</strong> з нашою авіакомпанією.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <img src="assets/images/info/package.png" alt="Асортимент, порівнюйте та обирайте найкраще" />
+        <h2 class="info-title">Порівнюйте та обирайте</h2>
+        <p class="info-text">
+            Порівнюйте пропозиції авіаквитків від понад тисячі авіакомпаній, щоб ви могли
+            вибрати <strong>найдешевший та найшвидший рейс</strong>.
+        </p>
+    </div>
+
+    <div class="info-box">
+        <img src="assets/images/info/clock.png" alt="Годинник, збережіть свій час" />
+        <h2 class="info-title">Знайдіть ідеальний час</h2>
+        <p class="info-text">
+            Дізнайтеся, коли <strong>найдешевший місяць</strong> або день для перельоту і 
+            налаштуйте <strong>цінові оповіщення</strong>, щоб забронювати рейс за потрібною ціною.
+        </p>
+    </div>
+</div>

@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { FooterComponent } from './footer/footer.component';
+import { RouterModule } from "@angular/router";
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  imports: [SidebarComponent, FooterComponent, RouterModule, HttpClientModule]
 })
 export class AppComponent {
-  title = 'fly-buy-tickets';
+  animationState = 'active';
 }
