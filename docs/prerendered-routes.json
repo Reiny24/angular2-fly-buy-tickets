@@ -1,0 +1,11 @@
+{
+  "routes": [
+    "/",
+    "/compare",
+    "/Deshevi-kvytky-na-litak",
+    "/login",
+    "/pay",
+    "/places",
+    "/Servis-porivniannia-aviareisiv"
+  ]
+}
