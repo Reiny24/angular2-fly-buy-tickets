@@ -46,12 +46,11 @@
 
 .places-box {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-self: start;
-    margin: 30px 20px;
-    padding-top: 20px;
+    grid-template-columns: 1fr 1.6fr;
+    align-items: start;
+    margin: 10px 20px;
+    padding-top: 10px;
     background-color: rgba(114, 111, 106, 0.70);
-    height: 1320px
 }
 
 .places-box h2 {
@@ -64,13 +63,14 @@
     margin: 0 20px 20px 20px;
     padding: 10px 0;
     justify-self: center;
+    align-self: center;
     align-items: center;
     justify-items: center;
     display: grid;
     grid-template-columns: repeat(9, 60px);
     grid-template-rows: repeat(17, 60px);
-    gap: 10px;
-    transform: scale(0.9);
+    gap: 7px;
+    column-gap: 10px;
 }
 
 .rotate-image {
@@ -80,13 +80,14 @@
 .schema hr {
     grid-column: span 7;
     border: none;
-    border-top: 5px solid black; 
+    border-top: 4px solid black; 
     width: 100%;
 }
 
 .windows2, .windows5 {
     display: grid;
-    gap: 10px;
+    gap: 7px;
+    column-gap: 10px;
 }
 
 .windows2 {
@@ -119,7 +120,8 @@
     display: grid;
     grid-template-columns: repeat(2, 60px);
     grid-template-rows: repeat(4, 60px);
-    gap: 10px;
+    gap: 7px;
+    column-gap: 10px;
 }
 
 .business {
@@ -128,7 +130,8 @@
     display: grid;
     grid-template-columns: repeat(3, 60px);
     grid-template-rows: repeat(4, 60px);
-    gap: 10px
+    gap: 7px;
+    column-gap: 10px;
 }
 
 .econom {
@@ -137,7 +140,8 @@
     display: grid;
     grid-template-columns: repeat(3, 60px);
     grid-template-rows: repeat(6, 60px);
-    gap: 10px;
+    gap: 7px;
+    column-gap: 10px;
 }
 
 .first-place, .business-place, .econom-place {
@@ -177,7 +181,8 @@
 
 .gap, .gap2 {
     display: grid;
-    gap: 10px;
+    gap: 7px;
+    column-gap: 10px;
     align-items: center;
 }
 
@@ -200,7 +205,7 @@
     background: rgba(217, 200, 177, 0.7);
     border: solid 8px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
-    padding: 20px;
+    padding: 10px 20px;
     margin: 0 20px;
 }
 
@@ -208,6 +213,10 @@
     width: 60px;
     align-self: center;
     grid-row: span 3;
+}
+
+hr {
+    margin: 8px;
 }
 
 ul {
@@ -222,7 +231,8 @@ ul {
 .seat-info {
     display: grid;
     grid-template-columns: 10% 60% 30%;
-    gap: 10px;
+    gap: 7px;
+    column-gap: 10px;
     align-items: center;
 }
 
@@ -238,7 +248,8 @@ ul {
 .blocked-seat-info, .selected-seat-info {
     display: grid;
     grid-template-columns: 10% 90%;
-    gap: 10px;
+    grid-template-rows: 30px;
+    gap: 7px;
 }
 
 .blocked-seat-info img, .selected-seat-info img {
@@ -248,14 +259,13 @@ ul {
 .baggage-info {
     display: grid;
     justify-items: center;
-    gap: 5px;
 
     background: rgba(217, 200, 177, 0.7);
     border: solid 8px rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     padding: 10px;
     
-    margin: 20px;
+    margin: 10px 20px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 110px;
 }
@@ -290,11 +300,9 @@ ul {
     grid-template-columns: 80px 150px 2fr 1fr 1fr;
     align-items: center;
     background: rgb(51, 54, 63);
-    padding: 20px;
+    padding: 10px 20px;
     
     color: white;
-    position: relative;
-    top: -60px
 }
 
 .cart-box p {
@@ -333,7 +341,7 @@ ul {
     pointer-events: none;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
     .places-box {
         grid-template-columns: 1fr;
         height: auto;
@@ -344,7 +352,93 @@ ul {
         top: 0
     }
 
+}
+
+@media (min-width: 1200px) {
+    .cart-box button {
+        font-size: 18px;
+    }
+    ul {
+        font-size: 16px;
+    }
+    
+    .price {
+        font-size: 20px;
+    }
+
+    .places {
+        font-size: 22px;
+    }
+    
+    .places-title {
+        padding: 5px;
+        font-size: 25px;
+    }
+    
+    .places h2 {
+        padding: 5px;
+        font-size: 22px;
+    }
+    
+    .places h3 {
+        font-size: 19px;
+    }
+    
+    .places h4 {
+        font-size: 17px;
+    }
     .schema {
-        transform: scale(1);
+        grid-template-columns: repeat(9, 30px);
+        grid-template-rows: repeat(17, 30px);
+    }
+    .exit, .rotate-image {
+        height: 25px;
+    }
+    .left-window, .right-window {
+        height: 27px;
+    }
+    .windows2 {
+        grid-template-rows: repeat(4, 30px);
+    }
+    
+    .windows5 {
+        grid-template-rows: repeat(10, 30px);
+    }
+    .first {
+        grid-template-columns: repeat(2, 30px);
+        grid-template-rows: repeat(4, 30px);
+    }
+    
+    .business {
+        grid-template-columns: repeat(3, 30px);
+        grid-template-rows: repeat(4, 30px);
+    }
+    
+    .econom {
+        grid-template-columns: repeat(3, 30px);
+        grid-template-rows: repeat(6, 30px);
+    }
+    .gap {
+        grid-template-rows: repeat(4, 30px);
+    }
+    
+    .gap2 {
+        grid-template-rows: repeat(10, 30px);
+    }
+    
+    .seats-info-box img {
+        width: 30px;
+    }
+
+    .first-place, .business-place, .econom-place {
+        width: 23px;
+        height: 23px;
+    }
+
+    .baggage-info {
+        grid-template-rows: 1fr 68px;
+    }
+    .baggage-info img {
+        height: 60px;
     }
 }

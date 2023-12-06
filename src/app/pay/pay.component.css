@@ -23,7 +23,7 @@
     color: white;
     align-items: center;
     padding-bottom: 20px;
-    top: 6.5%
+    top: 7.5%
 }
 
 .pay-data img {
@@ -103,7 +103,7 @@
 
 .pay-button {
     max-width: 200px;
-    height: 70px;
+    height: 55px;
     width: 200px;
     background-color: #FF9400;
     border: solid white 5px;
@@ -191,7 +191,7 @@ small {
     justify-content: center;
 }
 
-@media (max-width: 1260px) {
+@media (max-width: 1200px) {
     .pay {
         grid-template-columns: auto;
     }
@@ -220,7 +220,18 @@ small {
     }
 }
 
+@media (min-width: 1200px) {
+    .pay {
+        position: relative;
+        right: 23%; 
+    }
+}
+
 @media (min-width: 1300px) {
+    .pay {
+        position: relative;
+        right: 30%; 
+    }
     .pay-data {
         right: 10%;
     }

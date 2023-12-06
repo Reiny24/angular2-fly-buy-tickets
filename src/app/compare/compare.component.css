@@ -125,3 +125,22 @@
         grid-template-columns: 100%;
     }
 }
+
+@media (min-width: 1200px) {
+    .active {
+        font-size: 24px;
+    }
+    .prices p {
+        font-size: 21px;
+    }
+    .compare-flight h2, .compare-flight .sub-title {
+        font-size: 21px;
+    }
+    
+    .buy-ticket {
+        font-size: 18px;
+    }
+    .compare-title {
+        font-size: 38px;
+    }
+}

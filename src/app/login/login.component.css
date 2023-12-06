@@ -24,7 +24,7 @@
 }
 
 .login-button {
-    width: 320px;
+    width: 280px;
     height: 75px;
     background-color: #FF9400;
     border: solid white 5px;
@@ -67,14 +67,14 @@
 .form-inputs {
     margin: 5px;
     height: 40px;
-    width: 300px;
+    width: 250px;
     font-size: 35px;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     border: 3px solid gray;
     border-radius: 10px;
     grid-column: 1 / 2;
-    justify-self: end;
+    justify-self: start;
 }
 
 .form-inputs.ng-invalid.ng-touched {
@@ -85,7 +85,7 @@
     display: grid;
     justify-items: center;
     grid-template-columns: 8fr 150px;
-    width: 355px;
+    grid-column: span 2;
     align-items: center;
 }
 
@@ -98,5 +98,11 @@ small {
 
 .login-button:disabled {
     opacity: 0.4;
-    cursor: not-allowed !important;
+    pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+    .form-inputs {
+        font-size: 26px;
+    }
 }

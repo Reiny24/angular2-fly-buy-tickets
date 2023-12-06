@@ -44,3 +44,22 @@
         font-size: 34px;
     }
 }
+
+@media (min-width: 1200px) {
+    .about-us-container h1 {
+        font-size: 2.0em;
+    }
+      
+    .about-us-container h2 {
+        font-size: 1.4em;
+    }
+      
+    .about-us-container p {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+      
+    .about-us-container ul {
+        font-size: 22px;
+    }
+}

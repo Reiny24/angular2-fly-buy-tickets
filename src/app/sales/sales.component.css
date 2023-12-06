@@ -1,5 +1,6 @@
 .sales {
     padding: 0 20px;
+    margin-left: 30px;
 }
 
 .sales-title {
@@ -8,12 +9,12 @@
     font-weight: bold;
     align-self: end;
     text-align: start;
-    margin-top: 0;
+    margin: 5px 0;
 }
 
 .sales-box {
     background-color: rgba(133, 133, 133, 0.7);
-    margin: 40px 0;
+    margin: 20px 0;
     border-radius: 35px;
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -22,7 +23,7 @@
 
 .sales-box h2 {
     grid-column: span 2;
-    padding-top: 30px;
+    padding-top: 15px;
     margin: 0;
     font-size: 40px;
 }
@@ -30,7 +31,7 @@
 .sales-box hr {
     grid-column: span 2;
     border: none;
-    border: 5px solid white; 
+    border: 2px solid white; 
     margin: 10px 0;
     width: 99.3%;
 }
@@ -50,4 +51,30 @@
     padding: 10px 25px;
     text-align: justify;
     font-size: 35px;
+}
+
+@media (min-width: 1200px) {
+    .sales-title {
+        font-size: 40px;
+    }
+
+    .sales-box h2 {
+        font-size: 30px;
+    }
+    
+    .sales-box p {
+        font-size: 25px;
+    }
+
+    .sales-box img {
+        width: 100%;
+    }
+
+    .sales-box {
+        grid-template-columns: 1fr 7fr;
+    }
+    
+    .sales-box p {
+        align-self: center;
+    }
 }

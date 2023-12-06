@@ -16,7 +16,7 @@
           <h2>{{flight.price}} грн</h2>
 
           <button (click)="handleDelete(flight.id)">
-              <img src="/assets/images/pay/trash.png" alt="Видалити квиток" />
+              <img src="assets/images/pay/trash.png" alt="Видалити квиток" />
           </button>
       </div>
 
@@ -49,12 +49,12 @@
             <div class='pay-method'>
                 <label for="mastercard-visa">
                     <input type="radio" id="mastercard-visa" name="payment-method" [(ngModel)]="selectedPaymentMethod" value="mastercard-visa" required />
-                    <img src="/assets/images/pay/mastercard-visa.png" alt="MasterCard Visa" />
+                    <img src="assets/images/pay/mastercard-visa.png" alt="MasterCard Visa" />
                 </label>
         
                 <label for="g-apple-pay">
                     <input type="radio" id="g-apple-pay" name="payment-method" [(ngModel)]="selectedPaymentMethod" value="g-apple-pay"/>
-                    <img src="/assets/images/pay/g-apple-pay.png" alt="G-Pay Apple-Pay" />
+                    <img src="assets/images/pay/g-apple-pay.png" alt="G-Pay Apple-Pay" />
                 </label>
             </div>
             <input type="submit" value="Оплатити" class='pay-button' [disabled]="!payForm.valid || selectedPaymentMethod === ''">            
